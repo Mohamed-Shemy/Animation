@@ -1,0 +1,41 @@
+﻿<Window x:Class="Animation.Menu"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Animation"
+        mc:Ignorable="d" WindowStyle="None"
+        Title="MainWindow" Height="755"
+        MaxHeight="755" MaxWidth="775"
+        Width="775" AllowsTransparency="True" WindowStartupLocation="CenterScreen" Closing="Window_Closing" MouseDown="Window_MouseDown" Icon="wesnoth.ico">
+    <Window.Background>
+        <ImageBrush ImageSource="img/robot-menu.png" Stretch="Fill"/>
+    </Window.Background>
+
+    <Canvas x:Name="MainCanvas" Width="285" Canvas.Left="420" Canvas.Top="285" Margin="421,318,69,207" Height="230">
+        <StackPanel Width="285" Canvas.Top="0" >
+            <Image Source="btn/btn_new_game_1.png"
+                    Margin="0 , 0 , 0 ,5" Cursor="Hand"
+                   MouseMove="ButtonsMuoseDown"
+                   MouseLeave="ButtonsMuoseUp"
+                   x:Name="btn_new_game" MouseDown="StartNewGame"/>
+            <Image Source="btn/btn_options_1.png"
+                    Margin="0 , 0 , 0 ,5" Cursor="Hand"
+                    MouseMove="ButtonsMuoseDown"
+                   MouseLeave="ButtonsMuoseUp"
+                   x:Name="btn_options" MouseDown="btn_options_MouseDown"/>
+            <Image Source="btn/btn_players_1.png"
+                    Margin="0 , 0 , 0 ,5" Cursor="Hand"
+                    MouseMove="ButtonsMuoseDown"
+                   MouseLeave="ButtonsMuoseUp"
+                   x:Name="btn_players" MouseDown="btn_players_MouseDown"/>
+            <Image Source="btn/btn_exit_1.png"
+                    Margin="0 , 0 , 0 ,5" Cursor="Hand"
+                   MouseMove="ButtonsMuoseDown"
+                   MouseLeave="ButtonsMuoseUp"
+                   x:Name="btn_exit" 
+                   MouseDown="btn_exit_MouseUp"/>
+        </StackPanel>
+
+    </Canvas>
+</Window>

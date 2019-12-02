@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="Animation.PlayersList"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Animation"
+             mc:Ignorable="d" 
+             d:DesignHeight="285" d:DesignWidth="285" Loaded="UserControl_Loaded">
+
+    <Canvas Background="#393939" >
+       
+        <ListView x:Name="listView" Height="233" Width="285" Background="#393939" Foreground="#FC1778" FontSize="16" FontWeight="Bold">
+            <ListView.View>
+                <GridView ScrollViewer.VerticalScrollBarVisibility="Auto">
+                    <GridViewColumn Header="#" Width="30" DisplayMemberBinding="{Binding Number}">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Type}" TextAlignment="Center"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    
+                    <GridViewColumn Header="Name" Width="120" DisplayMemberBinding="{Binding Name}">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Type}" TextAlignment="Center"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    
+                    <GridViewColumn Header="Score" Width="60" DisplayMemberBinding="{Binding Score}">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Type}" TextAlignment="Center"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    
+                    <GridViewColumn Header="Level" Width="40" DisplayMemberBinding="{Binding Level}">
+                        <GridViewColumn.CellTemplate >
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Type}" TextAlignment="Center"/>
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                    
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <Button x:Name="btn_back" Content="     Back" Foreground="White" FontSize="25" Width="100" Canvas.Top="238" Cursor="Hand" Click="btn_back_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="img/back.png" AlignmentX="Left" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+
+    </Canvas>
+
+</UserControl>
